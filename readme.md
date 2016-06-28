@@ -4,7 +4,7 @@
 
 This was originally part of [an ES6 training](bit.ly/es6-intro-slides) by [Kent C. Dodds](https://twitter.com/kentcdodds)
 
-Now I refactored it in correspondence with lesson from [egghead.io](http://egghead.io/)
+Now I refactored it in correspondence with lessons from [egghead.io](http://egghead.io/)
 
 
 ## Thanks
