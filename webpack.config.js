@@ -6,15 +6,15 @@ module.exports = env => {
 
   const addPlugin = (add, plugin) => add ? plugin : undefined
   const ifProd = plugin => addPlugin(env.prod, plugin)
-  const ifDev = plugin => addPlugin(env.dev, plugin)
-  const ifTest = plugin => addPlugin(env.test, plugin)
+  //const ifDev = plugin => addPlugin(env.dev, plugin)
+  //const ifTest = plugin => addPlugin(env.test, plugin)
   const ifNotTest = plugin => addPlugin(!env.test, plugin)
   const removeEmpty = array => array.filter(i => !!i)
 
   return {
     entry: {
-      vendor: ['lodash','jquery'],
-      app: './js/app.js'
+      vendor: './app/index.vendor.js',
+      app: './app/index.bootstrap.js'
     },
     output: {
       filename: 'bundle.[name].[chunkhash].js',
@@ -26,8 +26,10 @@ module.exports = env => {
     bail: env.prod,
     module: {
       loaders: [
-        {test: /\.js$/, loader: 'babel!eslint', exclude: /node_modules/},
-        {test: /\.css$/, loader: 'style!css'},
+        {test: /\.js$/, loader: 'ng-annotate!babel!eslint', exclude: /node_modules/},
+        {test: /\.html$/, loader: 'raw', exclude: /node_modules/},
+        {test: /\.css$/, loader: 'style!css', exclude: /node_modules/},
+        {test: /\.scss$/, loader: 'style!css!sass', exclude: /node_modules/},
       ],
     },
 
@@ -51,7 +53,7 @@ module.exports = env => {
           screw_ie8: true, //eslint-disable-line
           warnings: false,
         }
-      })), 
+      })),
       ifNotTest(new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
       }))

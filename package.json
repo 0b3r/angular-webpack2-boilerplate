@@ -1,10 +1,10 @@
 {
   "private": true,
   "dependencies": {
+    "angular": "^1.5.7",
+    "angular-ui-router": "^0.3.1",
     "jquery": "^3.0.0",
-    "lodash": "^4.13.1",
-    "todomvc-app-css": "2.0.6",
-    "todomvc-common": "1.0.2"
+    "lodash": "^4.13.1"
   },
   "devDependencies": {
     "babel": "6.5.2",
@@ -33,9 +33,12 @@
     "karma-phantomjs-launcher": "^1.0.1",
     "karma-webpack": "1.7.0",
     "mocha": "2.5.3",
+    "ng-annotate-loader": "^0.1.0",
     "npm-run-all": "2.2.0",
     "opt-cli": "1.4.2",
+    "raw-loader": "^0.5.1",
     "rimraf": "2.5.2",
+    "sass-loader": "^4.0.0",
     "style-loader": "0.13.1",
     "webpack": "2.1.0-beta.13",
     "webpack-dev-server": "2.0.0-beta",
@@ -48,7 +51,7 @@
   },
   "scripts": {
     "test": "karma start",
-    "check-coverage": "istanbul check-coverage --statements 23 --branches 5 --functions 9 --lines 24",
+    "check-coverage": "istanbul check-coverage --statements 23 --branches 5 --functions 0 --lines 24",
     "watch:test": "npm test -- --auto-watch --no-single-run",
     "validate": "npm-run-all --parallel validate-webpack:* lint test --serial check-coverage",
     "validate-webpack:dev": "webpack-validator webpack.config.js --env.dev",

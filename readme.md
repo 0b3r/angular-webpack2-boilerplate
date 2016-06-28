@@ -1,22 +1,23 @@
-# Vanilla JavaScript TodoMVC Example
+# Angular Webpack 2 Boilerplate
 
 ## Purpose
 
 This was originally part of [an ES6 training](bit.ly/es6-intro-slides) by [Kent C. Dodds](https://twitter.com/kentcdodds)
 
-Now I'm using it to teach people about [Webpack](http://webpack.github.io/).
+Now I refactored it in correspondence with lesson from [Webpack.io](http://egghead.io/)
+
+I'm using it to teach people about [Webpack](http://webpack.github.io/).
 
 ## Thanks
 
-This codebase was originally taken from the TodoMVC project starting [here](https://github.com/tastejs/todomvc/tree/563d1e1b8cee5f6ec962ec43663cb66a72b69d76/examples/vanillajs). Big thanks to them!
+This codebase was originally taken from the ES6 TodoMVC training by [Kent C. Dodds](https://github.com/kentcdodds) project starting [here](https://github.com/kentcdodds/es6-todomvc). Big thanks to him for the awesome lessons!
 
 ## Project Setup
 
-1. Fork the GitHub Repo
-2. Clone your Fork
-3. Run `npm install`
-4. Run `npm run validate`
-5. If everything's running without errors, you can start checking out the available branches (`git remote show origin`)
+1. Run `npm install`
+2. Run `npm run validate`
+
+This includes Angular with Angular-UI-Router and has one main page
 
 ## Notes
 

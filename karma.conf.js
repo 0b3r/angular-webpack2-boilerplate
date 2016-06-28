@@ -1,8 +1,8 @@
 const webpackEnv = {test: true}
 const webpackConfig = require('./webpack.config')(webpackEnv)
 process.env.BABEL_ENV = 'test' // so we load the correct babel plugins
-const testGlob = 'src/js/**/*.test.js'
-const srcGlob = 'src/js/**/*!(test|stub).js'
+const testGlob = 'src/app/**/*.test.js'
+const srcGlob = 'src/app/**/*!(test|stub).js'
 
 module.exports = function setKarmaConfig(config) {
   config.set({
