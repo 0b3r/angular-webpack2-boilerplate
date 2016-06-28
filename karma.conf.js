@@ -27,7 +27,7 @@ module.exports = function setKarmaConfig(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: false,
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
     singleRun: true,
     concurrency: Infinity
   })
